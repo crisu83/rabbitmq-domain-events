@@ -8,7 +8,8 @@
   "license": "MIT",
   "devDependencies": {
     "@types/amqplib": "^0.8.2",
-    "@types/node": "^14.11.2",
+    "@types/node": "^18.8.5",
+    "concurrently": "^7.4.0",
     "gts": "^3.1.1",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
@@ -20,7 +21,11 @@
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
-    "fix": "gts fix"
+    "fix": "gts fix",
+    "start": "concurrently --prefix=none yarn:start:*",
+    "start:charlie": "ts-node-dev src/charlie.ts",
+    "start:beta": "ts-node-dev src/beta.ts",
+    "start:alpha": "ts-node-dev src/alpha.ts"
   },
   "dependencies": {
     "amqplib": "^0.10.3"
