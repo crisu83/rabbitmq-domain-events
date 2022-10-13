@@ -1,0 +1,24 @@
+{
+  "name": "@crisu83/rabbitmq-domain-events",
+  "version": "1.0.0",
+  "description": "A proof of concept implementation of publishing and subscribing to domain events using RabbitMQ.",
+  "main": "src/index.ts",
+  "repository": "git@github.com:crisu83/rabbitmq-domain-events.git",
+  "author": "Christoffer Niska <christofferniska@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "gts": "^3.1.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "~4.7.0"
+  },
+  "scripts": {
+    "up": "docker compose up",
+    "down": "docker compose down",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix"
+  }
+}
